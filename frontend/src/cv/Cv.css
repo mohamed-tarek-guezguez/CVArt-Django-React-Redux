@@ -1,0 +1,97 @@
+h1 {font-size: 1.7rem;}
+h2 {font-size: 1.3rem;}
+h3 {font-size: 1.1rem;}
+h4 {font-size: 1rem;}
+h5 {font-size: 0.9rem;}
+h6 {font-size: 0.8rem;}
+
+.grid__container {
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+    .grid__container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.sidebar {
+    padding: 1.5rem;
+    min-width: 220px;
+}
+
+.main {
+    padding: 1.5rem;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 6px;
+}
+
+.professionalTitle {
+    color: #EE7B2B; 
+    font-weight: bold;
+}
+
+.progress-bar, .progress-bar-striped {
+    border-radius: 0 !important;
+}
+
+
+.my-ul, .my-li{
+    list-style: none;
+    padding: 0;
+}
+
+.sessions{
+    margin-top: 2rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+.my-li{
+    padding-bottom: .5rem;
+    border-left: 2px solid #abaaed;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.time{
+    color: #2a2839;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;  
+}
+
+.my-p{
+    color: #4f4f4f;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top:0.4rem;
+}
+
+.update-info:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* cv 2 */
+
+.grid__container2 {
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+    .grid__container2 {
+        display: flex;
+        grid-template-rows: 1fr 3fr;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}

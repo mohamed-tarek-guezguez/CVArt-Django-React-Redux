@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #01A360;
+}
+
+.reviewDeleteBtn:hover {
+  color: red;
+}
+
+.textAnimation1 {
+  animation: 5s titleAnimation ease-in-out;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+}
+
+.textAnimation2 {
+  animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes skewBg {
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.glitchText:hover {
+  animation: wiggleWiggle 2s linear infinite;
+}
+
+@keyframes wiggleWiggle {
+  20%,
+  100% {
+    transform: translate(0, 3px);
+  }
+
+  0% {
+    transform: translate(0, 0px);
+  }
+  10% {
+    transform: translate(0, 3px);
+  }
+}
+
+#username{
+  color: #ddd;
+  font-weight: bold;
+}
+
+.sidebarItems:hover {
+  background-color: rebeccapurple;
+}
+
+.sideBox::-webkit-scrollbar {
+  display: none;
+}
+
+.instaCard {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.gmailCard {
+  background: linear-gradient(90deg, rgba(66, 133, 244,1) 0%, rgba(187, 0, 27,1) 25%, rgba(234, 67, 53,1) 50%, rgba(251, 188, 5,1) 75%, rgba(52, 168, 83,1) 100%);
+}
+
+.progress-title{
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+.progress{
+  height: 10px;
+  background: #e9e9ea;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: visible;
+  position: relative;
+}
+
+.progress:after{
+  border: 7px solid #e9e9ea;
+  left: auto;
+  right: 0;
+}
+.progress .progress-bar{
+  box-shadow: none;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  -webkit-animation: animate-positive 1s;
+  animation: animate-positive 1s;
+}
+.progress .progress-value{
+  width: 70px;
+  height: 35px;
+  line-height: 27px;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  top: -12px;
+  right: 0;
+  z-index: 2;
+}
+.progress.orange:before{ border: 7px solid #fe3b3b; }
+.progress.blue:before{ border: 7px solid #1a4966; }
+.progress.green:before{ border: 7px solid #53aa2c; }
+.progress.purple:before{ border: 7px solid #66406f; }
+.progress.orange .progress-value{
+  border: 5px solid #fe3b3b;
+  color: #fe3b3b;
+}
+.progress.blue .progress-value{
+  border: 5px solid #1a4966;
+  color: #1a4966;
+}
+.progress.green .progress-value{
+  border: 5px solid #53aa2c;
+  color: #53aa2c;
+}
+.progress.purple .progress-value{
+  border: 5px solid #66406f;
+  color: #66406f;
+}
+@-webkit-keyframes animate-positive{
+  0%{ width: 0; }
+}
+@keyframes animate-positive{
+  0%{ width: 0; }
+}
