@@ -174,15 +174,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-REACT_ROUTES = [
-    'cv',
-    'signin',
-    'signup',
-    'templates',
-    'dashboard',
-    'profile',
-]
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

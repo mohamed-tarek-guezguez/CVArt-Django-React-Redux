@@ -27,11 +27,4 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-react_routes = getattr(settings, 'REACT_ROUTES', [])
-
-for route in react_routes:
-    urlpatterns += [
-        path('{}/'.format(route), TemplateView.as_view(template_name='index.html'))
-    ]
-
 handler404 = 'api.views.handle404'
