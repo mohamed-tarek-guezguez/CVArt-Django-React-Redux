@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { 
     HeaderContainer, 
     HeaderWrap, 
@@ -16,6 +16,8 @@ import { BiLogIn } from "react-icons/bi";
 
 const TempNav = () => {
 
+    const [slug, setSlug] = useState('')
+
     const userLogin = useSelector(state => state.userLogin)
     const { userInfo } = userLogin
 
@@ -23,6 +25,27 @@ const TempNav = () => {
 
     const logoutHandler = () => {
         dispatch(logout())
+    }
+
+    useEffect(() => {      
+        if (userInfo)  {
+            generateSlug()
+        }
+    }, [userInfo])
+
+    const generateSlug = () => {
+        let res = ''
+        const s1 = (userInfo.first_name).toLowerCase().trim()
+
+        for (let c of s1) {
+            if (c === ' ') {
+                res += '-'
+            }
+            if (c.match(/^[0-9a-z]+$/)) {
+                res += c
+            }
+        }
+        setSlug(res)
     }
 
     return (
@@ -63,7 +86,7 @@ const TempNav = () => {
                                                     </NavDropdown.Item>
                                                 </LinkContainer>
 
-                                                <LinkContainer to={`/cv/${userInfo.first_name}`}>
+                                                <LinkContainer to={`/cv/${slug}`}>
                                                     <NavDropdown.Item>
                                                         <i className="fa fa-link" aria-hidden="true"></i>
                                                         &nbsp;&nbsp;Your Link

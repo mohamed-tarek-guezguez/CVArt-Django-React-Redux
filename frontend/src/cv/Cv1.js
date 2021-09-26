@@ -20,6 +20,8 @@ toast.configure()
 
 const Cv1 = ({myBgColor, myColor, user}) => {
 
+    console.log(user)
+
     const dispatch = useDispatch()
 
     const userLogin = useSelector(state => state.userLogin)

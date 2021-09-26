@@ -13,7 +13,16 @@ pre_save.connect(updateUser, sender=User)
 def updateProfile(sender, instance, **kwargs):
     profile = instance
     user = User.objects.get(email=profile.user)
-    profile.slug = user.first_name
+
+    slug = (user.first_name).lower().strip()
+    res = ''
+    for s in slug:
+        if s == ' ':
+            res+='-'
+        if s.isalnum():
+            res+=s
+
+    profile.slug = res
     profile.gmail = profile.name
 
 pre_save.connect(updateProfile, sender=Profile)

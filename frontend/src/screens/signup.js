@@ -52,11 +52,7 @@ const SignupPage = ({location, history}) => {
         } else if (password.length < 6) {
             setMessage('Passwords must be at least 6 characters')
         } else {
-            if (/[^0-9a-z]/.test(name)) {
-                setMessage('Only lowercase alphanumeric characters allowed!')
-            } else {
-                dispatch(register(name, email, password))
-            }
+            dispatch(register(name, email, password))
         }
     }
 

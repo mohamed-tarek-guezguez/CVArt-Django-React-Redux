@@ -67,9 +67,9 @@ def getUserProfile(request):
 def registerUser(request):
     data = request.data
     try:
-        if User.objects.filter(first_name=data['name']).exists():
-            message = {'detail': 'User Name already exists. Please try with another one.'}
-            return Response(message, status=status.HTTP_400_BAD_REQUEST)
+        # if User.objects.filter(first_name=data['name']).exists():
+        #     message = {'detail': 'User Name already exists. Please try with another one.'}
+        #     return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
         user = User.objects.create(
             first_name=data['name'],

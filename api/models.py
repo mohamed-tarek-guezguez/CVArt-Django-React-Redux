@@ -29,7 +29,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     createdAt = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=250)
-    slug = models.CharField(max_length=250, blank=True, null=True)
+    slug = models.CharField(max_length=250, unique=True, blank=True, null=True)
 
     firstName = models.CharField(default='First Name', max_length=250, blank=True, null=True)
     lastName = models.CharField(default='Last Name', max_length=250, blank=True, null=True)
