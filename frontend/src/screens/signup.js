@@ -36,7 +36,7 @@ const SignupPage = ({location, history}) => {
 
     const dispatch = useDispatch()
 
-    const redirect = location.search ? location.search.split('=')[1] : '/templates'
+    const redirect = location.search ? location.search.split('=')[1] : '/dashboard/personal'
 
     const userRegister = useSelector(state => state.userRegister)
     const {error, loading} = userRegister

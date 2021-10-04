@@ -17,7 +17,7 @@ export const homeObjOne = {
     dark: true,
     primary: true,
     darkText: false,
-    to: '/templates'
+    to: '/signin'
 }
 
 export const homeObjTwo = {
@@ -35,7 +35,7 @@ export const homeObjTwo = {
     dark: false,
     primary: false,
     darkText: true,
-    to: '/templates'
+    to: '/signin'
 }
 
 export const homeObjThree = {

@@ -27,12 +27,6 @@ const TempNav = () => {
         dispatch(logout())
     }
 
-    useEffect(() => {      
-        if (userInfo)  {
-            generateSlug()
-        }
-    }, [userInfo])
-
     const generateSlug = () => {
         let res = ''
         const s1 = (userInfo.first_name).toLowerCase().trim()
@@ -48,6 +42,13 @@ const TempNav = () => {
         setSlug(res)
     }
 
+    useEffect(() => {      
+        if (userInfo)  {
+            generateSlug()
+        }
+    }, [userInfo])
+
+    
     return (
         <>
             <HeaderContainer>
