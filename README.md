@@ -1,3 +1,5 @@
+URL : https://cvart.pythonanywhere.com/
+
 How to run server : py manage.py runserver
 
 How to install libraries : pip install -r requirements.txt
